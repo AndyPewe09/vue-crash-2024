@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Dashboard from '../views/Dashboard.vue'
 import Notes from '../views/Notes.vue'
-import Login from '../views/Login.vue'
+import LoginPortal from '../views/LoginPortal.vue'
 
 const routes = [
   {
     path: '/login',
     name: 'Login',
-    component: Login
+    component: LoginPortal
   },
   {
     path: '/',
@@ -30,16 +30,11 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  const token = localStorage.getItem('token')
-
-  if (to.matched.some((record) => record.meta.requiresAuth)) {
-    if (!token) {
-      next({ name: 'Login' }) // Redirect to login if not authenticated
-    } else {
-      next() // Proceed to the route if authenticated
-    }
+  const isAuthenticated = !!localStorage.getItem('token')
+  if (to.matched.some((record) => record.meta.requiresAuth) && !isAuthenticated) {
+    next({ name: 'Login' })
   } else {
-    next() // Always proceed if no auth required
+    next()
   }
 })
 
