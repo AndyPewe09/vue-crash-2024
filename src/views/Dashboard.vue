@@ -2,7 +2,6 @@
   <div>
     <h1>Dashboard</h1>
     <p>Welcome to the Dashboard</p>
-    <!-- Add your dashboard content here -->
     <card-component
       title="Selamat Siang Bapak Christian!"
       date="Kamis, 01 Agustus 2024"

@@ -4,12 +4,9 @@ import { useStore } from 'vuex'
 import { ref } from 'vue'
 import Navbar from '@/components/NavbarHeader.vue'
 import SidebarNav from './components/SidebarNav.vue'
-// import Sidebar from '@/components/SidebarMenu.vue'
 
 const store = useStore()
 const isAuthenticated = computed(() => store.state.isAuthenticated)
-
-// const isAuthenticated = computed(() => !!localStorage.getItem('token'));
 const isSidebarOpen = ref(true)
 
 const toggleSidebar = () => {
@@ -23,7 +20,7 @@ const toggleSidebar = () => {
     <SidebarNav :isOpen="isSidebarOpen" v-if="isAuthenticated">
       <div class="d-flex w-100">
         <div class="px-2">
-          <div :class="['content', { 'content-expanded': !isSidebarOpen }]">
+          <div :class="['content', { 'content-expanded': isSidebarOpen }]">
             <router-view />
           </div>
         </div>
@@ -46,7 +43,7 @@ const toggleSidebar = () => {
 }
 
 .content-expanded {
-  margin-left: 80px;
+  margin-left: 200px; /* Adjust this value as needed */
 }
 
 #page-content-wrapper {

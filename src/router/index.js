@@ -21,7 +21,6 @@ const routes = [
     component: Notes,
     meta: { requiresAuth: true }
   }
-  // Add more routes here if needed
 ]
 
 const router = createRouter({
