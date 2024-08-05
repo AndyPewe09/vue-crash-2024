@@ -1,8 +1,8 @@
 <template>
   <div :class="['sidebar', { 'sidebar-collapsed': !isOpen }]">
-    <div class="sidebar-header">
+    <!-- <div class="sidebar-header">
       <h2 v-if="isOpen">Web Portal</h2>
-    </div>
+    </div> -->
     <ul class="nav flex-column">
       <li class="nav-item" v-for="item in menuItems" :key="item.name">
         <router-link :to="{ name: item.routeName }" class="nav-link">
@@ -37,14 +37,19 @@ const menuItems = ref([
 
 <style scoped>
 .sidebar {
-  width: 30 0px;
-  height: 100vh;
   background-color: #fff;
-  transition: width 0.3s;
+  height: 100vh;
+  transition:
+    width 0.3s,
+    min-width 0.3s;
 }
 
 .sidebar-collapsed {
-  width: 80px;
+  min-width: 80px;
+}
+
+.sidebar:not(.sidebar-collapsed) {
+  min-width: 300px;
 }
 
 .sidebar-header {

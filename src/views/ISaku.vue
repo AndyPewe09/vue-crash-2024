@@ -1,7 +1,6 @@
 <script setup>
 import { LottieAnimation } from 'lottie-web-vue'
 import isakuJSON from '@/assets/isaku.json'
-import ButtonComponent from '@/components/ButtonComponent.vue'
 import TitleAndButton from '@/components/TitleAndButton.vue'
 </script>
 
