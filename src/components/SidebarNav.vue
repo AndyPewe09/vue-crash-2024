@@ -5,12 +5,12 @@
     </div>
     <ul class="nav flex-column">
       <li class="nav-item" v-for="item in menuItems" :key="item.name">
-        <a class="nav-link" href="#">
+        <router-link :to="{ name: item.routeName }" class="nav-link">
           <div class="nav-link-content">
             <i :class="item.icon"></i>
             <span v-if="isOpen">{{ item.name }}</span>
           </div>
-        </a>
+        </router-link>
       </li>
     </ul>
   </div>
@@ -22,22 +22,22 @@ import { ref } from 'vue'
 const props = defineProps(['isOpen'])
 
 const menuItems = ref([
-  { name: 'Dashboard', icon: 'bi bi-columns-gap' },
-  { name: 'i.saku', icon: 'bi bi-phone' },
-  { name: 'Penilaian', icon: 'bi bi-patch-check' },
-  { name: 'Beasiswa', icon: 'bi bi-buildings' },
-  { name: 'Notifikasi', icon: 'bi bi-bell' },
-  { name: 'Pengumuman', icon: 'bi bi-newspaper' },
-  { name: 'Peraturan Perusahaan', icon: 'bi bi-newspaper' },
-  { name: 'FAQ', icon: 'bi bi-question-circle' },
-  { name: 'Teguran dan Peringatan', icon: 'bi bi-exclamation-square' },
-  { name: 'Bantuan Pendidikan', icon: 'bi bi-vector-pen' }
+  { name: 'Dashboard', icon: 'bi bi-columns-gap', routeName: 'Dashboard' },
+  { name: 'i.saku', icon: 'bi bi-phone', routeName: 'Isaku' },
+  { name: 'Penilaian', icon: 'bi bi-patch-check', routeName: 'Penilaian' },
+  { name: 'Beasiswa', icon: 'bi bi-buildings', routeName: 'Beasiswa' },
+  { name: 'Notifikasi', icon: 'bi bi-bell', routeName: 'Notifikasi' },
+  { name: 'Pengumuman', icon: 'bi bi-newspaper', routeName: 'Pengumuman' },
+  { name: 'Peraturan Perusahaan', icon: 'bi bi-newspaper', routeName: 'Perusahaan' },
+  { name: 'FAQ', icon: 'bi bi-question-circle', routeName: 'FAQ' },
+  { name: 'Teguran dan Peringatan', icon: 'bi bi-exclamation-square', routeName: 'Teguran' },
+  { name: 'Bantuan Pendidikan', icon: 'bi bi-vector-pen', routeName: 'Pendidikan' }
 ])
 </script>
 
 <style scoped>
 .sidebar {
-  width: 250px;
+  width: 30 0px;
   height: 100vh;
   background-color: #fff;
   transition: width 0.3s;
@@ -51,7 +51,6 @@ const menuItems = ref([
   display: flex;
   align-items: center;
   padding: 20px;
-  margin-top: 16px;
   padding-bottom: 10px;
 }
 

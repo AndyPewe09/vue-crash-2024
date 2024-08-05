@@ -5,7 +5,7 @@
         <button class="navbar-toggler custom-toggler" type="button" @click="toggleSidebar">
           <span class="navbar-toggler-icon custom-toggler-icon"></span>
         </button>
-        <img src="../assets/img/idm-logo.svg" class="ms-4" width="120" height="60" />
+        <img src="../assets/img/idm-logo.svg" class="img-logo" width="120" height="60" />
       </div>
 
       <div class="d-flex align-items-center gap-4">
@@ -47,6 +47,9 @@ const toggleSidebar = () => {
   font-size: 1.2rem;
   transition: margin-right 0.3s;
   color: #0d1282;
+}
+.img-logo {
+  margin-left: 40px !important;
 }
 .custom-toggler {
   border-color: transparent;

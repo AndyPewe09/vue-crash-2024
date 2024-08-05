@@ -2,7 +2,7 @@ import { createStore } from 'vuex'
 
 export default createStore({
   state: {
-    isAuthenticated: !!localStorage.getItem('token')
+    isAuthenticated: !!localStorage.getItem('authToken')
   },
   mutations: {
     setAuthenticated(state, isAuthenticated) {
@@ -11,11 +11,11 @@ export default createStore({
   },
   actions: {
     login({ commit }, token) {
-      localStorage.setItem('token', token)
+      localStorage.setItem('authToken', token)
       commit('setAuthenticated', true)
     },
     logout({ commit }) {
-      localStorage.removeItem('token')
+      localStorage.removeItem('authToken')
       commit('setAuthenticated', false)
     }
   },

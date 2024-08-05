@@ -106,10 +106,10 @@ export default {
         const token = response.data.token
 
         // Save the token to localStorage or Vuex store
-        localStorage.setItem('token', token)
+        localStorage.setItem('authToken', token)
 
         // Redirect to the dashboard
-        window.location.href = '/dashboard'
+        window.location.href = '/'
       } catch (error) {
         console.error('Login failed:', error)
         alert('Login failed. Please check your credentials.')

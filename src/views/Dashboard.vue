@@ -15,16 +15,16 @@
   </div>
   <div>
     <div class="row row-cols-3">
-      <div class="col">
+      <div class="col-3">
         <card-component title="Quick Links" date="Kamis, 01 Agustus 2024"> </card-component>
       </div>
-      <div class="col">
+      <div class="col-6">
         <card-component
           title="WEB PORTAL HR"
           date="Beberapa Fitur Masih Dalam Perbaikan"
         ></card-component>
       </div>
-      <div class="col">
+      <div class="col-3">
         <card-component title="Leave Used" date="Kamis, 01 Agustus 2024"></card-component>
       </div>
     </div>

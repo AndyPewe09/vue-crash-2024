@@ -3,11 +3,11 @@ import { computed } from 'vue'
 import { useStore } from 'vuex'
 import { ref } from 'vue'
 import Navbar from '@/components/NavbarHeader.vue'
-import SidebarNav from './components/SidebarNav.vue'
+import SidebarNav from '@/components/SidebarNav.vue'
 
 const store = useStore()
 const isAuthenticated = computed(() => store.state.isAuthenticated)
-const isSidebarOpen = ref(true)
+const isSidebarOpen = ref(false)
 
 const toggleSidebar = () => {
   isSidebarOpen.value = !isSidebarOpen.value
@@ -17,16 +17,12 @@ const toggleSidebar = () => {
 <template>
   <div id="app">
     <Navbar @toggleSidebar="toggleSidebar" v-if="isAuthenticated" />
-    <SidebarNav :isOpen="isSidebarOpen" v-if="isAuthenticated">
-      <div class="d-flex w-100">
-        <div class="px-2">
-          <div :class="['content', { 'content-expanded': isSidebarOpen }]">
-            <router-view />
-          </div>
-        </div>
+    <div class="main-content">
+      <SidebarNav :isOpen="isSidebarOpen" v-if="isAuthenticated" />
+      <div :class="['content', { '': isSidebarOpen && isAuthenticated }]">
+        <router-view />
       </div>
-    </SidebarNav>
-    <router-view v-else />
+    </div>
   </div>
 </template>
 
@@ -34,6 +30,11 @@ const toggleSidebar = () => {
 #app {
   display: flex;
   flex-direction: column;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
 }
 
 .content {
