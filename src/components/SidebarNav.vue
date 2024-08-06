@@ -1,14 +1,15 @@
 <template>
-  <div :class="['sidebar', { 'sidebar-collapsed': !isOpen }]">
-    <!-- <div class="sidebar-header">
-      <h2 v-if="isOpen">Web Portal</h2>
-    </div> -->
+  <div
+    :class="['sidebar', { 'sidebar-collapsed': !isOpen }]"
+    @mouseenter="openSidebar"
+    @mouseleave="closeSidebar"
+  >
     <ul class="nav flex-column">
       <li class="nav-item" v-for="item in menuItems" :key="item.name">
         <router-link :to="{ name: item.routeName }" class="nav-link">
           <div class="nav-link-content">
             <i :class="item.icon"></i>
-            <span v-if="isOpen">{{ item.name }}</span>
+            <span v-if="isOpen || isOpened">{{ item.name }}</span>
           </div>
         </router-link>
       </li>
@@ -20,6 +21,7 @@
 import { ref } from 'vue'
 
 const props = defineProps(['isOpen'])
+// const isOpen = ref(false)
 
 const menuItems = ref([
   { name: 'Dashboard', icon: 'bi bi-columns-gap', routeName: 'Dashboard' },
@@ -33,6 +35,13 @@ const menuItems = ref([
   { name: 'Teguran dan Peringatan', icon: 'bi bi-exclamation-square', routeName: 'Teguran' },
   { name: 'Bantuan Pendidikan', icon: 'bi bi-vector-pen', routeName: 'Pendidikan' }
 ])
+// function openSidebar() {
+//   isOpen.value = true
+// }
+
+// function closeSidebar() {
+//   isOpen.value = false
+// }
 </script>
 
 <style scoped>
@@ -65,7 +74,7 @@ const menuItems = ref([
 
 .nav-link {
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px;
   display: flex;
   justify-content: flex-start;
   transition:
