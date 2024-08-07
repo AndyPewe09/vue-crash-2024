@@ -11,6 +11,7 @@ import Perusahaan from '../views/Pengumuman.vue'
 import FAQ from '../views/FAQ.vue'
 import Teguran from '../views/TeguranPeringatan.vue'
 import Pendidikan from '../views/BantuanPendidikan.vue'
+import ProfileView from '../views/Profile.vue'
 
 const routes = [
   { path: '/login', name: 'Login', component: LoginPortal },
@@ -24,7 +25,8 @@ const routes = [
   { path: '/perusahaan', name: 'Perusahaan', component: Perusahaan, meta: { requiresAuth: true } },
   { path: '/faq', name: 'FAQ', component: FAQ, meta: { requiresAuth: true } },
   { path: '/teguran', name: 'Teguran', component: Teguran, meta: { requiresAuth: true } },
-  { path: '/pendidikan', name: 'Pendidikan', component: Pendidikan, meta: { requiresAuth: true } }
+  { path: '/pendidikan', name: 'Pendidikan', component: Pendidikan, meta: { requiresAuth: true } },
+  { path: '/profile', name: 'Profile', component: ProfileView, meta: { requiresAuth: true } }
 ]
 
 const router = createRouter({

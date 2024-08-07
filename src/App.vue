@@ -17,7 +17,7 @@ const toggleSidebar = () => {
 <template>
   <div id="app">
     <Navbar @toggleSidebar="toggleSidebar" v-if="isAuthenticated" />
-    <div class="main-content">
+    <div class="d-flex">
       <SidebarNav :isOpen="isSidebarOpen" v-if="isAuthenticated" />
       <div :class="['content', { '': isSidebarOpen && isAuthenticated }]">
         <router-view />

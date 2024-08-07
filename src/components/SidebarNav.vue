@@ -21,7 +21,6 @@
 import { ref } from 'vue'
 
 const props = defineProps(['isOpen'])
-// const isOpen = ref(false)
 
 const menuItems = ref([
   { name: 'Dashboard', icon: 'bi bi-columns-gap', routeName: 'Dashboard' },
@@ -35,13 +34,6 @@ const menuItems = ref([
   { name: 'Teguran dan Peringatan', icon: 'bi bi-exclamation-square', routeName: 'Teguran' },
   { name: 'Bantuan Pendidikan', icon: 'bi bi-vector-pen', routeName: 'Pendidikan' }
 ])
-// function openSidebar() {
-//   isOpen.value = true
-// }
-
-// function closeSidebar() {
-//   isOpen.value = false
-// }
 </script>
 
 <style scoped>
