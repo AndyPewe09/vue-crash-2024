@@ -2,6 +2,8 @@
 import { LottieAnimation } from 'lottie-web-vue'
 import isakuJSON from '@/assets/isaku.json'
 import TitleAndButton from '@/components/TitleAndButton.vue'
+import '@/assets/css/isaku-styles.css'
+import '@/assets/css/font-styles.css'
 </script>
 
 <template>
@@ -32,51 +34,3 @@ import TitleAndButton from '@/components/TitleAndButton.vue'
     </div>
   </div>
 </template>
-
-<style>
-.isaku {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  padding: 0 20px !important;
-}
-.btn-comp {
-  width: 150px !important;
-  border-radius: 8px !important;
-}
-.nunito-medium {
-  font-family: 'Nunito ', sans-serif !important;
-  font-weight: 400;
-}
-.poppins-light {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.poppins-regular {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.poppins-medium {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 500;
-  font-style: normal;
-}
-.poppins-semibold {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 600;
-  font-style: normal;
-}
-.poppins-bold {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 700;
-  font-style: normal;
-}
-.poppins-black {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 900;
-  font-style: normal;
-}
-</style>

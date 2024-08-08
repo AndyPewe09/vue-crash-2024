@@ -33,6 +33,8 @@ import { ref, computed } from 'vue'
 import FAQFilter from '../components/FAQFilter.vue'
 import FAQList from '../components/FAQList.vue'
 import FAQPagination from '../components/FAQPagination.vue'
+import '@/assets/css/faq-styles.css'
+import '@/assets/css/font-styles.css'
 
 const faqs = [
   {
@@ -230,13 +232,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.faq-container {
-  padding: 20px;
-}
-
-.faq-container h1 {
-  margin-bottom: 20px;
-}
-</style>

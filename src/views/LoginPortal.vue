@@ -4,6 +4,8 @@ import InputText from '@/components/InputText.vue'
 import { onMounted, ref } from 'vue'
 import { LottieAnimation } from 'lottie-web-vue'
 import loginJSON from '@/assets/login.json'
+import '@/assets/css/login-styles.css'
+import '@/assets/css/font-styles.css'
 
 let anim = ref()
 
@@ -118,50 +120,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.nunito-medium {
-  font-family: 'Nunito ', sans-serif !important;
-  font-weight: 400;
-}
-.poppins-light {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.poppins-regular {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.poppins-medium {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 500;
-  font-style: normal;
-}
-.poppins-semibold {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 600;
-  font-style: normal;
-}
-.poppins-bold {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 700;
-  font-style: normal;
-}
-.poppins-black {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 900;
-  font-style: normal;
-}
-.divAll {
-  position: absolute;
-  height: 100vh;
-}
-.rowALl {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-</style>

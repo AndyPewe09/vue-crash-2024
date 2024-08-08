@@ -1,5 +1,7 @@
 <script setup>
 import CustomButton from '@/components/CustomButton.vue'
+import '@/assets/css/dashboard-styles.css'
+import '@/assets/css/font-styles.css'
 </script>
 
 <template>
@@ -122,54 +124,3 @@ import CustomButton from '@/components/CustomButton.vue'
     </div>
   </div>
 </template>
-
-<script>
-// import CardComponent from '@/components/CardComponent.vue'
-
-// export default {
-//   name: 'DashboardView',
-//   components: {
-//     CardComponent
-//   }
-// }
-</script>
-
-<style>
-.bg-portal {
-  background-image: url('https://portal.hrindomaret.com/portal/img/dashboard4.svg');
-}
-.nunito-medium {
-  font-family: 'Nunito ', sans-serif !important;
-  font-weight: 400;
-}
-.poppins-light {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-.poppins-regular {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.poppins-medium {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 500;
-  font-style: normal;
-}
-.poppins-semibold {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 600;
-  font-style: normal;
-}
-.poppins-bold {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 700;
-  font-style: normal;
-}
-.poppins-black {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 900;
-  font-style: normal;
-}
-</style>

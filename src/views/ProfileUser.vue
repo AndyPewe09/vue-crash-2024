@@ -1,3 +1,8 @@
+<script setup>
+import '@/assets/css/profile-styles.css'
+import '@/assets/css/font-styles.css'
+</script>
+
 <template>
   <div class="profile-card">
     <div class="profile-header">
@@ -36,73 +41,3 @@
     </div>
   </div>
 </template>
-
-<style scoped>
-.nunito-medium {
-  font-family: 'Nunito ', sans-serif !important;
-  font-weight: 400;
-}
-.poppins-light {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-.poppins-regular {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.poppins-medium {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 500;
-  font-style: normal;
-}
-.poppins-semibold {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 600;
-  font-style: normal;
-}
-.poppins-bold {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 700;
-  font-style: normal;
-}
-.poppins-black {
-  font-family: 'Poppins', sans-serif !important;
-  font-weight: 900;
-  font-style: normal;
-}
-.profile-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.profile-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.profile-pic {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-right: 20px;
-}
-
-.profile-section {
-  margin-bottom: 20px;
-}
-
-.profile-info {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.profile-info > div {
-  flex: 1 1 50%;
-  padding: 10px 0;
-}
-</style>

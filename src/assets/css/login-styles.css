@@ -1,0 +1,9 @@
+.divAll {
+  position: absolute;
+  height: 100vh;
+}
+.rowALl {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

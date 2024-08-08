@@ -1,0 +1,10 @@
+.penilaian {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 0 20px !important;
+}
+.btn-comp {
+  width: 150px !important;
+  border-radius: 8px !important;
+}

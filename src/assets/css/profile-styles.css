@@ -1,0 +1,33 @@
+.profile-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-section {
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-info > div {
+  flex: 1 1 50%;
+  padding: 10px 0;
+}
