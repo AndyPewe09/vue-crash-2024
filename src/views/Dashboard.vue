@@ -60,7 +60,7 @@
       </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-2">
       <div class="col">
         <div class="bg-white p-4 rounded-2 shadow-sm p-3">
           <div>
@@ -120,7 +120,7 @@
               >request sick leave</a
             >
           </div>
-          <hr class="mt-5 mb-2" />
+          <hr class="mb-2" />
           <div>
             <a href="#" class="text-decoration-underline text-black d-block">View All</a>
           </div>
