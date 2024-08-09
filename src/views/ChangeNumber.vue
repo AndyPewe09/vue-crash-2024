@@ -1,14 +1,19 @@
+<script setup>
+import '@/assets/css/profilecard-styles.css'
+import '@/assets/css/font-styles.css'
+</script>
+
 <template>
   <div class="container">
     <div class="card shadow-sm">
       <div class="card-header">
-        <h4>Change Number</h4>
+        <h4 class="poppins-semibold">Change Number</h4>
       </div>
       <hr style="margin: 0" />
       <div class="card-body">
         <form @submit.prevent="handleSubmit">
           <div class="mb-3">
-            <label for="isakuNumber" class="form-label">No. HP iSaku</label>
+            <label for="isakuNumber" class="form-label poppins-semibold">No. HP iSaku</label>
             <input
               type="text"
               class="form-control"
@@ -19,7 +24,7 @@
           </div>
 
           <div class="mb-3">
-            <label for="mainNumber" class="form-label">No. HP Utama</label>
+            <label for="mainNumber" class="form-label poppins-semibold">No. HP Utama</label>
             <input type="text" class="form-control" id="mainNumber" v-model="mainNumber" disabled />
             <div class="form-check">
               <input
@@ -28,14 +33,14 @@
                 id="mainNumberAsWA"
                 v-model="mainNumberAsWA"
               />
-              <label class="form-check-label" for="mainNumberAsWA">
+              <label class="form-check-label poppins-regular" for="mainNumberAsWA">
                 Tambahkan No. HP Utama Sebagai No. WA
               </label>
             </div>
           </div>
 
           <div class="mb-3">
-            <label for="newMainNumber" class="form-label">No. HP Utama Baru</label>
+            <label for="newMainNumber" class="form-label poppins-semibold">No. HP Utama Baru</label>
             <input type="text" class="form-control" id="newMainNumber" v-model="newMainNumber" />
             <div class="form-check">
               <input
@@ -44,14 +49,14 @@
                 id="newMainNumberAsWA"
                 v-model="newMainNumberAsWA"
               />
-              <label class="form-check-label" for="newMainNumberAsWA">
+              <label class="form-check-label poppins-regular" for="newMainNumberAsWA">
                 Tambahkan No. HP 2 Sebagai No. WA
               </label>
             </div>
           </div>
 
           <div class="mb-3">
-            <label for="newSecondNumber" class="form-label">No. HP 2 Baru</label>
+            <label for="newSecondNumber" class="form-label poppins-semibold">No. HP 2 Baru</label>
             <input
               type="text"
               class="form-control"
@@ -61,7 +66,7 @@
           </div>
 
           <div class="mb-3">
-            <label for="officePhone" class="form-label">No. Telp. Kantor</label>
+            <label for="officePhone" class="form-label poppins-semibold">No. Telp. Kantor</label>
             <div class="input-group">
               <input
                 type="text"
@@ -70,35 +75,49 @@
                 v-model="officePhone"
                 disabled
               />
-              <span class="input-group-text">Ext.</span>
+              <span class="input-group-text poppins-semibold">Ext.</span>
               <input type="text" class="form-control" v-model="officePhoneExt" disabled />
             </div>
           </div>
 
           <div class="mb-3">
-            <label for="newOfficePhone" class="form-label">No. Telp. Kantor Baru</label>
-            <select class="form-select" id="newOfficePhone" v-model="newOfficePhone">
+            <label for="newOfficePhone" class="form-label poppins-semibold"
+              >No. Telp. Kantor Baru</label
+            >
+            <select
+              class="form-select poppins-semibold"
+              id="newOfficePhone"
+              v-model="newOfficePhone"
+            >
               <option>PT INDOMARCO PRISMATAMA</option>
             </select>
-            <div class="form-text text-danger">*Tidak semua unit memiliki no. telp. kantor</div>
+            <div class="form-text text-danger poppins-semibold">
+              *Tidak semua unit memiliki no. telp. kantor
+            </div>
           </div>
 
           <div class="mb-3">
-            <label for="newOfficePhoneExt" class="form-label">Pilih No. Kantor</label>
+            <label for="newOfficePhoneExt" class="form-label poppins-semibold"
+              >Pilih No. Kantor</label
+            >
             <div class="input-group">
-              <select class="form-select" id="newOfficePhoneExt" v-model="newOfficePhoneExt">
+              <select
+                class="form-select poppins-semibold"
+                id="newOfficePhoneExt"
+                v-model="newOfficePhoneExt"
+              >
                 <option>PT INDOMARCO PRISMATAMA</option>
               </select>
-              <span class="input-group-text">Ext.</span>
-              <input type="text" class="form-control" v-model="newOfficePhoneExtInput" />
+              <span class="input-group-text poppins-semibold">Ext.</span>
+              <input type="number" class="form-control" v-model="newOfficePhoneExtInput" />
             </div>
-            <div class="form-text text-danger">
+            <div class="form-text text-danger poppins-semibold">
               *Silakan dapat dirubah sesuai kondisi lokasi kerja Anda saat ini dan dapat dikosongkan
               apabila Anda tidak memiliki No. Ext
             </div>
           </div>
 
-          <button type="submit" class="btn btn-primary">Change Number</button>
+          <button type="submit" class="btn btn-primary poppins-semibold">Change Number</button>
         </form>
       </div>
     </div>
@@ -132,26 +151,6 @@ export default {
 </script>
 
 <style scoped>
-.card {
-  border-radius: 12px;
-  border: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.card-header {
-  border-bottom: none;
-  background-color: #fff;
-}
-
-.card-body {
-  padding: 2rem;
-  padding-top: 10px;
-}
-
-.form-label {
-  font-weight: bold;
-}
-
 input[disabled],
 select[disabled] {
   background-color: #e9ecef;

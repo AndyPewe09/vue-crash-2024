@@ -9,17 +9,17 @@ import '@/assets/css/font-styles.css'
       <div class="container">
         <div class="card">
           <div class="card-header">
-            <h4>Change Portal Password</h4>
+            <h4 class="poppins-semibold">Change Portal Password</h4>
           </div>
           <hr style="margin: 0" />
           <div class="card-body">
             <form @submit.prevent="handleSubmit">
               <div class="mb-3">
-                <label for="oldPassword" class="form-label">Old Password</label>
+                <label for="oldPassword" class="form-label poppins-semibold">Old Password</label>
                 <div class="input-group">
                   <input
                     type="password"
-                    class="form-control"
+                    class="form-control poppins-semibolds"
                     id="oldPassword"
                     v-model="oldPassword"
                   />
@@ -34,7 +34,7 @@ import '@/assets/css/font-styles.css'
               </div>
 
               <div class="mb-3">
-                <label for="newPassword" class="form-label">New Password</label>
+                <label for="newPassword" class="form-label poppins-semibold">New Password</label>
                 <div class="input-group">
                   <input
                     type="password"
@@ -112,7 +112,9 @@ import '@/assets/css/font-styles.css'
               </div>
 
               <div class="mb-3">
-                <label for="confirmPassword" class="form-label">Re-input New Password</label>
+                <label for="confirmPassword" class="form-label poppins-semibold"
+                  >Re-input New Password</label
+                >
                 <div class="input-group">
                   <input
                     type="password"
@@ -130,7 +132,9 @@ import '@/assets/css/font-styles.css'
                 </div>
               </div>
 
-              <button type="submit" class="btn btn-primary">Change Password</button>
+              <button type="submit" class="btn btn-primary poppins-semibold">
+                Change Password
+              </button>
             </form>
           </div>
         </div>
@@ -186,20 +190,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.password-requirements {
-  margin-top: 10px;
-}
-
-.password-requirements p {
-  margin: 0;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-}
-
-.password-requirements i {
-  margin-right: 5px;
-}
-</style>

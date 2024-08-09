@@ -7,7 +7,7 @@
             <li v-for="item in menuItems" :key="item.name" class="nav-item">
               <a
                 href="#"
-                class="nav-link"
+                class="nav-link poppins-semibold"
                 :class="{ active: item.name === activeMenuItem }"
                 @click="setActiveMenuItem(item.name)"
               >

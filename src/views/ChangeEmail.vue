@@ -1,14 +1,19 @@
+<script setup>
+import '@/assets/css/profilecard-styles.css'
+import '@/assets/css/font-styles.css'
+</script>
+
 <template>
   <div class="container">
     <div class="card shadow-sm">
       <div class="card-header">
-        <h4>Change Email Address</h4>
+        <h4 class="poppins-semibold">Change Email Address</h4>
       </div>
       <hr style="margin: 0" />
       <div class="card-body">
         <form @submit.prevent="handleSubmit">
           <div class="mb-3">
-            <label for="officeEmail" class="form-label">Office Mail</label>
+            <label for="officeEmail" class="form-label poppins-semibold">Office Mail</label>
             <input
               type="email"
               class="form-control"
@@ -19,12 +24,12 @@
           </div>
 
           <div class="mb-3">
-            <label for="newOfficeEmail" class="form-label">NEW! Office Mail</label>
+            <label for="newOfficeEmail" class="form-label poppins-semibold">NEW! Office Mail</label>
             <input type="email" class="form-control" id="newOfficeEmail" v-model="newOfficeEmail" />
           </div>
 
           <div class="mb-3">
-            <label for="personalEmail" class="form-label">Personal Mail</label>
+            <label for="personalEmail" class="form-label poppins-semibold">Personal Mail</label>
             <input
               type="email"
               class="form-control"
@@ -71,26 +76,6 @@ export default {
 </script>
 
 <style scoped>
-.card {
-  border-radius: 12px;
-  border: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.card-header {
-  border-bottom: none;
-  background-color: #fff;
-}
-
-.card-body {
-  padding: 2rem;
-  padding-top: 20px;
-}
-
-.form-label {
-  font-weight: bold;
-}
-
 input[disabled] {
   background-color: #e9ecef;
   opacity: 1;
