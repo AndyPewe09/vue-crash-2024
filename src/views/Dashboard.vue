@@ -12,7 +12,7 @@
         <div class="bg-white p-4 rounded-2 shadow-sm p-3">
           <div>
             <h3 class="poppins-semibold mb-1">Selamat Pagi Bapak Christian!</h3>
-            <h6 class="poppins-light">Kamis, 06 Agustus 2024</h6>
+            <h6 class="poppins-light">Senin, 12 Agustus 2024</h6>
           </div>
           <div class="mt-4 d-flex flex-wrap gap-3">
             <div class="">
@@ -61,7 +61,7 @@
     </div>
 
     <div class="row row-cols-1 row-cols-md-3 g-4 mb-2">
-      <div class="col">
+      <div class="col-md-3">
         <div class="bg-white p-4 rounded-2 shadow-sm p-3">
           <div>
             <h6 class="poppins-semibold mb-1">Quick Links</h6>
@@ -101,13 +101,13 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col-md-6">
         <div class="bg-white p-4 rounded-2 shadow-sm bg-portal text-white">
           <h2 class="poppins-medium mb-0">WEB PORTAL HR</h2>
           <p class="poppins-light fs-6">Beberapa fitur masih dalam tahap development</p>
         </div>
       </div>
-      <div class="col">
+      <div class="col-md-3">
         <div class="bg-white p-4 rounded-2 shadow-sm p-3">
           <div>
             <h6 class="poppins-semibold mb-1">Leaved Used</h6>

@@ -18,7 +18,7 @@ export default {
     },
     backgroundColor: {
       type: String,
-      default: ''
+      default: '#000'
     },
     hasBackground: {
       type: Boolean,
@@ -31,6 +31,10 @@ export default {
         ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'].includes(
           value
         )
+    },
+    route: {
+      type: String,
+      default: null
     }
   },
   computed: {
@@ -52,6 +56,9 @@ export default {
   methods: {
     handleClick(event) {
       this.$emit('click', event)
+      if (this.route) {
+        this.$router.push(this.route)
+      }
     }
   }
 }
