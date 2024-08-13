@@ -134,8 +134,6 @@ export default {
           date: '30/07/2024',
           image: '/src/assets/img/kpr.jpg'
         }
-
-        // Add more announcements here
       ],
       currentPage: 1,
       itemsPerPage: 3
@@ -151,9 +149,9 @@ export default {
           announcement.title.toLowerCase().includes(this.searchTerm.toLowerCase())
         )
         .sort((a, b) => {
-          const dateA = new Date(a.date.split('/').reverse().join('-')) // Convert DD/MM/YYYY to YYYY-MM-DD
+          const dateA = new Date(a.date.split('/').reverse().join('-'))
           const dateB = new Date(b.date.split('/').reverse().join('-'))
-          return dateB - dateA // Sort from newest to oldest
+          return dateB - dateA
         })
 
       return filtered.slice(startIndex, endIndex)
@@ -165,7 +163,7 @@ export default {
 
   methods: {
     filterAnnouncements() {
-      this.currentPage = 1 // Reset to the first page on search
+      this.currentPage = 1
     },
     changePage(page) {
       this.currentPage = page

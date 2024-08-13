@@ -22,7 +22,6 @@ export default {
     const route = useRoute()
     const pengumumanItem = ref(null)
 
-    // Sample data, should ideally be fetched from an API
     const pengumuman = [
       {
         id: 1,
@@ -38,7 +37,6 @@ export default {
         imageUrl: '/path/to/dana-image.png',
         date: '02/07/2024'
       }
-      // Add more pengumuman as needed
     ]
 
     pengumumanItem.value = pengumuman.find((item) => item.id === parseInt(route.params.id))
